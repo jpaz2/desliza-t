@@ -14,7 +14,13 @@ body {
   text-align:center;
   margin-top: 40px;
 }
+#contacto {
+  background: #CCCFFA;
+  padding: 50px 0 30px 0;
+  text-align:center;
+  margin-top: 40px;
+}
+footer-aa {
 
-footer {
   background: url(../img/3.jpeg);
 }
