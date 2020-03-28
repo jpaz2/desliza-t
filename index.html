@@ -11,6 +11,13 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Social Buttons for Bootstrap-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet" >
+    <link href="css/bootstrap-social.css" rel="stylesheet" >
+
   </head>
   <body>
 
@@ -110,9 +117,9 @@
       </div>
     </section>
     <footer id="contacto">
-      <div class="container">
+      <div class="container" style="padding-bottom: 20px">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-6">
             <form class="card mt-4">
               <div class="card-body">
                 <div class="form-group">
@@ -125,42 +132,33 @@
                   <textarea cols="30" rows="10" placeholder="Message" class="form-control"></textarea>
                 </div>
                 <button class="btn btn-outline-secondary btn-block">
-                  Send
+                      <a href="#" onclick="enviarCorreo('Eres muy feo')">Enviame un correo</a> 
                 </button>
               </div>
             </form>
           </div>
+          <div class="col-md-6">
+            <div style="padding-top: 200px;">
+              <div>
+                  <a style="color:black; text-decoration:none"  target="_blank" href="https://web.whatsapp.com/send?phone=5492215558174&amp;text=Hola, quisiera obtener información de los productos de su página" >   Eniviame un mensaje!!
+                      <img style="height: 58px;" src="img/icono-whatsapp3.png" alt="WhatsApp chat">
+                  </a>
+              </div>   
+              <div >
+                  <a style="color:black; text-decoration:none" target="_blank" href="https://www.instagram.com/desliza_t/" >   https://www.instagram.com/desliza_t/
+                      <img style="height: 48px;" src="img/icono-instagram5.png" alt="instagram.com/desliza_t">
+                  </a>
+             </div>                
+          </div>
         </div>
+        </div>        
       </div>
-      <section id="footer-footer">
-          <!-- style 9  logo -->
-            <div class="ccw_style9 animated bounce ccw-an">
-                <a target="_blank" href="https://web.whatsapp.com/send?phone=5492215558174&amp;text=Hola, quisiera obtener información de los productos de su página" class="img-icon-a nofocus">   
-                    <img class="img-icon ccw-analytics" id="style-9" data-ccw="style-9" style="height: 48px;" src="img/icono-whatspp.jpeg" alt="WhatsApp chat">
-                </a>
-            </div>
+      <section style="background: #61E6A2; padding: 10px;">
+        <center>
+           <p>Todos los derechos reservados, 2020 © <a style="font-size: 20px; color:black; " target="_blank" href="https://otra.midesarrolloweb.com.ar">Hachi Lin</p>
+        </center>
       </section>
-      <section style="background: #61E6A2;">
-            <div class="row-container style-dark-bg footer-last">
-              <div class="row row-parent style-dark no-top-padding no-h-padding no-bottom-padding">
-                <div class="site-info uncell col-lg-6 pos-middle text-left">
-                        <p>Todos los derechos reservados, 2020 © <strong> Desliza-T </strong></p>
-                </div>
-                <!-- site info -->
-                <div class="uncell col-lg-6 pos-middle text-right">
-                    <div class="social-icon icon-box icon-box-top icon-inline">
-                        <a href="https://www.facebook.com/" target="_blank" src="img/icono-facebook.jpeg"><i class="fa fa-facebook-square"></i></a>
-                    </div>
-                    <div class="social-icon icon-box icon-box-top icon-inline">
-                      <a href="https://www.instagram.com/desliza_t/" target="_blank">instagram<i class="fa fa-instagram">instagram1</i></a>
-                    </div>
-                    <div class="social-icon icon-box icon-box-top icon-inline">
-                      <a href="https://www.twitter.com" target="_blank">twitter<i class="fa fa-twitter">twitter1</i></a>
-                    </div>
-                </div>
-              </div>
-            </div>
-      </section>
+
     </footer>
 
     <!-- SCRIPTS -->
@@ -211,5 +209,23 @@
       });
     });
     </script>
+
+
+    <script>
+  /**
+   * Método que envía un e-mail a través del cliente que tenga por defecto
+   * @param  {String} insTextoComp Texto que aparecerá dentro del mensaje
+   */
+  function enviarCorreo(insTextoComp) {
+    
+  
+      var sLink = "mailto:hachilinprogramadorweb@gmail.com" 
+       + "?subject=" + "Te han compartirdo el siguente texto"
+       + "&body=" + insTextoComp;
+      window.location.href = sLink;
+    
+  }
+  </script>
+
   </body>
 </html>
