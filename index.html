@@ -132,7 +132,7 @@
                   <textarea cols="30" rows="10" placeholder="Message" class="form-control"></textarea>
                 </div>
                 <button class="btn btn-outline-secondary btn-block">
-                      <a href="#" onclick="enviarCorreo('Eres muy feo')">Enviame un correo</a> 
+                      <a href="mailto:javierpazposo@gmail.com" >Enviame un correo</a> 
                 </button>
               </div>
             </form>
@@ -155,7 +155,7 @@
       </div>
       <section style="background: #61E6A2; padding: 10px;">
         <center>
-           <p>Todos los derechos reservados, 2020 © <a style="font-size: 20px; color:black; " target="_blank" href="https://otra.midesarrolloweb.com.ar">Hachi Lin</p>
+           <p>Todos los derechos reservados, 2020 © <a style="font-size: 20px; color:black; " target="_blank" href="https://www.midesarrolloweb.com.ar">Hachi Lin</p>
         </center>
       </section>
 
@@ -217,10 +217,10 @@
    * @param  {String} insTextoComp Texto que aparecerá dentro del mensaje
    */
   function enviarCorreo(insTextoComp) {
-    
-  
-      var sLink = "mailto:hachilinprogramadorweb@gmail.com" 
-       + "?subject=" + "Te han compartirdo el siguente texto"
+    var sEmail = prompt("¿A quien quieres enviarlo?", "E-mail");
+    if(sEmail != null) {
+      var sLink = "mailto:" + escape(sEmail)
+       + "?subject=" + escape("Te han compartirdo el siguente texto")
        + "&body=" + insTextoComp;
       window.location.href = sLink;
     
